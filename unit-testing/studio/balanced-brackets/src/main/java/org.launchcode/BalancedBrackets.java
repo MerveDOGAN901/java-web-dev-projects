@@ -1,7 +1,8 @@
-package org.launchcode;
+package launchcode;
+
 public class BalancedBrackets {
     /*
-     * The function BalancedBrackets should return true if and only if
+     * The function launchcode.BalancedBrackets should return true if and only if
      * the input string has a set of "balanced" brackets.
      *
      * That is, whether it consists entirely of pairs of opening/closing
@@ -27,7 +28,12 @@ public class BalancedBrackets {
             } else if (ch == ']') {
                 brackets--;
             }
+            if (brackets<0){
+                return false;
+            }
+
         }
-        return brackets == 0;
+
+        return (brackets == 0);
     }
 }
